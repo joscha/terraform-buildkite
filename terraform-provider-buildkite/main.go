@@ -1,12 +1,12 @@
 package main
 
 import (
-	"../buildkite"
-	"github.com/hashicorp/terraform/plugin"
+    "github.com/hashicorp/terraform/plugin"
+    "github.com/joscha/terraform-buildkite/buildkite"
 )
 
 func main() {
-	plugin.Serve(&plugin.ServeOpts{
-		ProviderFunc: buildkite.Provider,
-	})
+    plugin.Serve(&plugin.ServeOpts{
+        ProviderFunc: buildkite.Provider,
+    })
 }
